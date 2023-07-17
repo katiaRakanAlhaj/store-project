@@ -7,9 +7,7 @@ import { login, setError, setPassword, setPhone } from '../redux/authSlice';
 const LoginPage = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const { phone, password, error, isLoggedIn, role } = useSelector(
-    (state) => state.auth
-  );
+  const { phone, password, error } = useSelector((state) => state.auth);
 
   const handleLogin = useCallback(() => {
     if (!phone || !password) {
@@ -26,7 +24,7 @@ const LoginPage = () => {
         dispatch(setError('Invalid phone number or password'));
       }
     }
-  }, [phone, password, dispatch]);
+  }, [phone, password, dispatch, navigate]);
 
   return (
     <div className="store">

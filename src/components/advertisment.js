@@ -6,6 +6,7 @@ const CreateAdvertisement = () => {
   const [advertisementType, setAdvertisementType] = useState('');
   const [image, setImage] = useState('');
   const [store, setStore] = useState('');
+  const [error, setError] = useState('');
   const [link, setLink] = useState('');
   const [stores, setStores] = useState([]);
   const { isLoggedIn, role } = useSelector((state) => state.auth);
