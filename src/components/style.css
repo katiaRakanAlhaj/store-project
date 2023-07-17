@@ -1,0 +1,11 @@
+.store {
+  background-image: url('/src/images/store-background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  padding: 7rem;
+}
+.error-label {
+  color: red;
+  font-weight: bold;
+}
